@@ -1,0 +1,28 @@
+.notification-wrap { position: relative; }
+.top-icon { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; transition: background .18s ease-out, transform .18s ease-out; }
+.top-icon:hover { background: #edf5f1; }
+.top-icon.alert-active { color: #b66b1a; background: #fff2d9; animation: bell-ring 1.8s ease-in-out infinite; }
+.top-icon.alert-active b { width: 8px; height: 8px; right: 3px; top: 3px; box-shadow: 0 0 0 4px rgba(239,109,88,.18); }
+.notification-popover { position: absolute; right: -16px; top: 42px; width: 290px; z-index: 10; padding: 14px; border: 1px solid #d6e3dd; border-radius: 9px; background: #fffefa; box-shadow: 0 18px 44px rgba(20,53,46,.18); animation: notification-in .2s cubic-bezier(.23,1,.32,1); }
+.notification-popover.active { border-color: #eccb91; background: linear-gradient(135deg,#fffaf0,#fff3d9); }
+.notification-popover > div { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.notification-popover > div span { font-size: 9px; letter-spacing: .12em; font-weight: 700; color: #b1711e; }
+.notification-popover > div button { border: 0; background: transparent; color: #7d887f; font-size: 18px; line-height: 1; }
+.notification-popover strong { display: block; font: 600 13px 'Space Grotesk'; color: var(--navy); }
+.notification-popover p { font-size: 10px; color: #72847b; line-height: 1.45; margin: 7px 0; }
+.notification-popover small { display: block; padding-top: 8px; border-top: 1px solid #eadab7; font-size: 10px; color: #a26c19; font-weight: 700; }
+.area-weather-alert { display: flex; align-items: center; gap: 12px; padding: 13px 15px; margin: -12px 0 15px; border-radius: 9px; border: 1px solid #d9e4df; background: #f7fbf8; box-shadow: 0 8px 23px rgba(20,53,46,.05); }
+.area-weather-alert.active { border-color: #ebc580; background: linear-gradient(100deg,#fff9ec,#fff2d4); box-shadow: 0 12px 28px rgba(191,131,29,.11); }
+.area-weather-alert-icon { width: 33px; height: 33px; display: grid; place-items: center; border-radius: 8px; background: #e4f1ed; color: #3d8d7d; }
+.area-weather-alert.active .area-weather-alert-icon { background: #f9df9e; color: #ae7218; }
+.area-weather-alert > div:nth-child(2) { display: flex; flex-direction: column; gap: 3px; flex: 1; }
+.area-weather-alert > div:nth-child(2) > span { font-size: 9px; font-weight: 700; letter-spacing: .11em; color: #769088; }
+.area-weather-alert.active > div:nth-child(2) > span { color: #b1741f; }
+.area-weather-alert strong { font: 600 12px 'Space Grotesk'; color: var(--navy); }
+.area-weather-alert small { font-size: 10px; color: #718279; }
+.area-weather-alert > button { border: 0; border-radius: 6px; background: #e2f2ec; color: #197f75; padding: 9px 10px; font-size: 10px; font-weight: 700; display: flex; align-items: center; gap: 5px; max-width: 260px; text-align: left; }
+.area-weather-alert.active > button { background: #ffebbb; color: #a66a16; }
+.area-weather-alert > button:hover { transform: translateY(-1px); }
+@keyframes bell-ring { 0%,100% { transform: rotate(0); } 8%,24% { transform: rotate(12deg); } 16%,32% { transform: rotate(-12deg); } 40% { transform: rotate(0); } }
+@keyframes notification-in { from { opacity: 0; transform: translateY(-5px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (max-width: 720px) { .area-weather-alert { align-items: flex-start; flex-wrap: wrap; } .area-weather-alert > button { width: 100%; max-width: none; justify-content: center; } .notification-popover { right: -52px; width: min(290px,calc(100vw - 30px)); } }

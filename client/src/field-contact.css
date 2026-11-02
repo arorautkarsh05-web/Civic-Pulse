@@ -1,0 +1,7 @@
+.reporter-contact-card { margin: 13px 0; padding: 12px; border: 1px solid #d6e9e0; border-radius: 8px; background: #f4faf6; }
+.reporter-contact-card > span { display: block; font-size: 9px; font-weight: 700; letter-spacing: .12em; color: #4c897e; }
+.reporter-contact-card strong { display: block; margin-top: 5px; color: var(--navy); font-size: 12px; }
+.reporter-contact-card p { margin: 4px 0 9px; color: #70827a; font-size: 10px; line-height: 1.45; }
+.reporter-contact-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.reporter-contact-actions a { padding: 7px 9px; border-radius: 5px; background: #e0f1eb; color: #197e73; font-size: 10px; font-weight: 700; text-decoration: none; }
+.field-contact-note { margin-top: 9px; padding-top: 8px; border-top: 1px solid #d9e9e1; color: #a16c19; font-size: 10px; font-weight: 700; }
